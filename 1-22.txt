@@ -1,0 +1,48 @@
+Agnar Hall
+ASTR 535
+Homework due 1/22
+
+
+1. This file will be in my github repository. 
+
+
+
+2. i) NM01 is a program by Dr. Chanover to use her Acousto-Optic Imaging Camera (a guest instrument) to map Jupiter's cloud stucture in support of the Juno mission, which will arrive at Jupiter later this year. 
+
+NM02 is our class trip to APO during which we will be trained to use the facility. 
+
+NM03 is another program by Dr. Chanover using ARCTIC to observe the occultation of a bright transneptunian Cold Classical binary called Sila-Nunam, which will allow for the determination of their relative albedos and the albedo variation on their surfaces. In this case, the transit will be almost exactly edge-on as seen from Earth, which is rare for this object, so this program is time-sensitive.  
+
+NM04 is a program by Carlos and Dr. Walterbos using ARCTIC (and SPICAM if necessary) to image edge-on galaxies in H-alpha using one of Dr. Walterbos's filters. The goal is to use these images to study star formation in the target galaxies, which can be compared to data from the VLA to better understand the radio emission seen in the galaxies. 
+
+NM05 is a program by Dr. Dmitry Bizyaev using DIS to obtain spectra of unusual "superthin" edge-on galaxies located far from cosmic filaments in very empty regions of space. These rare galaxies have lots of dark matter and little star formation, making them very useful for understanding how environmental conditions affect galaxy evolution. The data taken for this program will provide rotation curves of these galaxies, which indicate how dark matter is distributed. 
+
+NM06 is another program by Dr. Bizyaev using NICFPS to get NIR images of galaxies in support of the program from NM05 and the MaNGA program. The goal is to contrain the thicknesses of galactic disks to take these into consideration when modeling rotation curves. 
+
+NM07 is a program by Dr. Kaike Pan with some collaborators in China using ARCES to obtain spectra of several bright stars from the LAMOST LEGUE survey, which probes the structure of the Galactic halo and disk. The data from this program will help the group evaluate the quality of stellar parameters from the LEGUE pipeline. 
+
+NM08 is a program by Dr. Kinemuchi using ARCTIC during small bits of time throughout the quarter (a filler program) to observe the variable star population of the Ursa Minor dwarf spheroidal galaxy. This data can provide information about the epochs of star formation in the galaxy. 
+
+
+
+ii) The images show a map of cloud cover over APO to help users determine whether or not the sky is clear enough to get data. Several images taken at different times are displayed together, allowing users to figure out if clouds are heading toward APO and how fast they might be approaching, which helps them decide whether they have time to get data before clouds roll in (or, if there are currently clouds overhead, if they'll move soon enough that data can still be taken during that half-night). 
+
+The Sky History graphs show sky counts and the standard deviation in those counts over time. The Sky Level graph shows the sky brightness so that users can take this into account during data rediction. The Sky Standard Deviation graph shows the spread in the sky level (in other words, how non-uniform the sky brightness is) and is important for photometry - if there's very little standard deviation in the sky level, then conditions are photometric, but if there's too much variation in the sky level, photometry can't be performed. 
+
+
+
+iii) First of all, I thought it was pretty neat that I was able to find documentation of the times I've used APO: http://35m-schedule.apo.nmsu.edu/2013-06-27.1/proposals/CU01.txt is when I went up to APO with my ASTR 3520 (Observation and Instrumentation II) class at CU, and http://35m-schedule.apo.nmsu.edu/2013-09-08.1/proposals/CU05.txt is a proposal I wrote myself to use APO remotely to look for signs of possible AGN feedback in a galaxy cluster with an unusual temperature-luminosity relationship as observed in the x-ray regime. 
+
+I was surprised to find that there's a user interface for SDSS. I always thought that the same people ran it all the time and that you had to just download data from the SDSS database rather than being able to actually use it with TUI and whatnot. Does that mean that the 2.5m telescope can be used for things other than SDSS, or what? 
+
+I also noticed that the mid-IR all-sky cloud camera is an SDSS instrument, which I never knew before. 
+
+Apparently, ARCSAT will start using queue mode soon. Cool! 
+
+I had never heard of GIFS (the Goddard IFS and Imager) before checking out the website. Apparently it's an imager/imaging spectrograph for the 3.5m designed by Goddard, and it can do coronagraphic imaging (so the 3.5m can still be used during the day, right?). What does IFS mean? I think the I must be for "imaging" and the S must be for "spectrograph," but I'm not sure what the F might be. 
+
+
+
+iv) My housing request has been submitted. 
+
+
