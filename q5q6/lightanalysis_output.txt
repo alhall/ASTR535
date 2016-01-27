@@ -1,0 +1,18 @@
+OUTPUT OF lightanalysis.pro
+
+
+For a 5500-Angstom photon, 
+lambda = 5500 Angstroms
+nu =    5.4507721e+14 Hz
+E =    3.6117229e-12 ergs
+ 
+At 3000 Angstroms, Flambda [erg/cm2/s/A]=    3.0020768e-12 * Fnu [erg/cm2/s/Hz].
+  (Therefore, at 3000 Angstroms, Fnu [erg/cm2/s/Hz] =    3.3310274e+11 * Flambda [erg/cm2/s/A].)
+At 5500 Angstroms, Flambda [erg/cm2/s/A]=    1.0090314e-11 * Fnu [erg/cm2/s/Hz].
+  (Therefore, at 5500 Angstroms, Fnu [erg/cm2/s/Hz] =    9.9104947e+10 * Flambda [erg/cm2/s/A].)
+At 8000 Angstroms, Flambda [erg/cm2/s/A]=    2.1348102e-11 * Fnu [erg/cm2/s/Hz].
+  (Therefore, at 8000 Angstroms, Fnu [erg/cm2/s/Hz] =    4.6842573e+10 * Flambda [erg/cm2/s/A].)
+ 
+At 5500 Angstroms, m(STMAG) = m(ABNU) +     0.0097616615
+Therefore, at 5500 Angstroms, m(ABNU) = m(STMAG) -     0.0097616615
+
