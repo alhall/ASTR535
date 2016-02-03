@@ -1,6 +1,6 @@
 FUNCTION combined_mag, m1, m2
 ;-------------------------------------------------------------------------------------------------------
-;  Short function that takes as input the apparent magnitude of each of two stars, 
+;  Short IDL function that takes as input the apparent magnitude of each of two stars, 
 ;    and computes and returns the apparent magnitude of the two stars combined.
 ;
 ;  INPUTS: m1, the magnitude of the first star

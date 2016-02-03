@@ -10,6 +10,8 @@ FUNCTION combined_mag, m1, m2
 ;             as a single object. 
 ; 
 ;  This is a stand-alone function and can be used without compiling other programs. 
+;
+;  (This function has been tested against by-hand calculations and shown to work correctly.)
 ;-------------------------------------------------------------------------------------------------------
 mag1 = float(m1)         ; ensures that the 1st input magnitude is a float for calculations
 mag2 = float(m2)         ; ensures that the 2nd input magnitude is a float for calculations
