@@ -1,0 +1,119 @@
+Exercises: 2/05
+
+
+
+
+1. Open the image SN17135_r.0103.fits: gaia /home/apo/dec06/UT061215/SN17135_r.0103.fits or ds9 /home/apo/dec06/UT061215/SN17135_r.0103.fits.
+	I opened it with DS9. 
+
+    a) Look at the pan window (gaia: small window in upper left). What portion of the image is being shown in the main display window? Note how you can pan around in the image using the pan window, using the mouse in the main window (gaia: see instructions at very bottom when mouse is in main window ), or using the scroll bars. 
+	By default, the main window display shows the region of the image contained within a rectangle with a height of about half the image and a width of about 2/3 the image centered right in the middle of the image. (Changing the zoom or the size of the ds9 window changes that rectangle.) 
+
+    b) Why do you see a vertical white line in the main image but not in the pan window? 
+	The vertical line is only one or two pixels thick in the main image. In the pan window, the image has been rescaled to fit in the tiny area, so some columns have been removed, including the one containing the vertical white line.
+
+    c) Play around with changing the zoom values (gaia: using the Scale: panel or the Z and z buttons). At different zoom values, go into the main window and use the cursor to move around by single pixels at a time, and note the pixel numbers being displayed in the X and Y panels, as well as the pixel data values in the Value panel. 
+	zoomed in a little: 
+	X=307.550 Y=581.277 Value=609
+	X=308.632 Y=581.277 Value=596
+	zoomed in more:
+	X=559.914 Y=489.998 Value=507  
+	X=560.436 Y=489.998 Value=507
+	X=560.436 Y=490.520 Value=514
+	zoomed in so 1 pixel fills the box:
+	X=541.996 Y=541.014 Value=396 
+	X=541.996 Y=541.048 Value=396
+	X=541.962 Y=541.048 Value=396
+	X=541.928 Y=541.048 Value=396
+	X=541.894 Y=541.048 Value=396
+	X=541.894 Y=541.014 Value=396
+	X=541.894 Y=540.980 Value=396
+	zoomed in so 1 pixel fills the main image:
+	X=538.000 Y=538.000 Value=390
+	etc.
+
+
+
+
+2. What do you see in the image?
+	When I first opened the image, the scale was linear min-max (which I've learned from experience is not very good for most astronomical images) and the image just looked black with three white dots and the vertical white line, so I changed the scale to linear zscale, and at that point I could see the actual image (galaxies and some stars).  
+
+    a) Move the cursor around in the main image, and note the data values. Are changes in the data values reflected in the brightnesses that you see on the screen?
+	For the most part, the changes in the brightnesses I see on the screen do reflect the changes in data values. Darker pixels have lower data values and lighter pixels have higher data values. When the image is pretty zoomed-out, it's hard to see brightness differences corresponding to data value differences of 10 to 40 or so (I just see some graininess in areas like that), but when I zoom in enough to just barely make out individual pixels, then I can tell the difference in brightness between pixels that are as little as 2 data values apart. If I zoom in even more, then I can see the difference between pixels that are just 1 data value apart. 
+
+    b) Redisplay the image using the different selections in the Scale menu, from 100% down to 50%. Explain how and why the image appearance changes as you change this selection. If you don't understand what is changing and why, ask.
+	This is different in DS9 than in Gaia (these instructions are given in "Gaia language"), but I think the DS9 version is min-max/zscale and the functions linear, log, power, sqrt,squared, asinh,sinh, and histogram. These do the things I talk about in part c (right below) but use mathematical functions to map data values to color values. 
+
+    c) Using your knowledge of the data values, try setting the display parameters manually using the Low and High panels, and understand how and why the appearance changes as you change these values.
+	This also seems to be a Gaia thing, but I'll try to explain what I understand to be the DS9 version (right-clicking and dragging the mouse left-right and/or up-down). What's changing is how color values (0-255) are assigned to data values; in other words, how spread-out or concentrated the color gradient is (up-down) and how that gradient is "weighted" (left-right). If the gradient is really spread-out, then there's less contrast between very high and very low data values, whereas a more concentrated gradient makes a sharper difference. The "weighting" of the gradient determines which data values get which colors assigned to them: for example, if the color table is greyscale, you can change the weighting such that more of the low values are black (rather than the intermediate-low values being dark grey). 
+
+    d) Try different color maps using the Color menu. If you don't understand what is changing and why, ask.
+	I tend to prefer the cool and plain grey color maps; the cool map sometimes helps me catch features I didn't notice before (not so much in this image, but it did increase the contrast a bit and made it a little easier to look at). The cosmic rays are a little easier to distinguish in the b color map, the a color map helps highlight the columns of "dead pixels," and the rainbow map helps identify which regions of the image are over-saturated.  
+
+    e) Try using different intensity maps using the different mapping in the Scale menu. If you don't understand what is changing and why, ask.
+	In my opinion, histogram and log are the only decent intensity maps for min max (I'm really not a fan of min max). For zscale (which I use by default), I think the intensity maps with the most clarity are linear, power (sometimes, though not for this image), squared, and (my personal favorite) sinh. I think those are the best combinations for being able to clearly see features and details in images. 
+
+    f) Note that more color maps and intensity maps are available through the View window.
+	Question 6 made me realize that this is specifically for Gaia. (This isn't true in DS9 - all the options for each setting are laid out in that setting's menu bar.) 
+
+
+
+
+3. What is in the image?
+
+    a) Using zoom and color adjustments as need, try to describe all of the different types of objects you see in the frame.
+	It looks like there are: 
+	i) two close/large spiral galaxies (with swaths of diffuse gas around them and some brighter strips extending into the gas that look like spiral arms) near the middle of the image; one of them has a bright spot that might be an AGN or something similar, ie an object or event within a galaxy that's so bright that it outshines the rest of the galaxy;  
+	ii) a few dozen other diffuse things, some round and some disky, that are probably smaller/satellite galaxies (some might be galaxies that are just farther away) scattered throughout the image, and 
+	iii) a pair of really bright stars in the bottom left corner and a third star in the top left corner (you can tell they're stars because they're saturated and have diffraction spikes), as well as some fainter stars. 
+	Elaborating on i): because the image has "SN" in the title, I did a little digging on a hunch, and I think I figured out what the bright spot is: a type 1a supernova from the SDSS-II Supernova survey. (I found an Astronomical Journal paper about objects like this by Holtzman et al. from 2008, which I think is a pretty good indication that I'm right about it being a supernova. The 17135 in the image title is an ID number, which I found in a different paper that referenced Holtzman et al. 2008.) Type 1a SNe are extremely bright, brighter than the rest of their host galaxy, so this makes perfect sense to me. 
+
+    b) What are the data values in the background? What are reasonable display settings to use to see what is going on in the background?
+	Most of the background is between 300 and 500 (though the pixels with cosmic rays are anywhere from 500 to more than 1000!). The corners and edges of the image tend to have higher background values than the center, possibly due to vignetting (or being slightly over-corrected to get rid of vignetting?). The other spots that are a bit brighter than the rest of the background are where faint background galaxies are located. I think the most reasonable display settings are zscale for scale, sinh for intensity, and cool for color. 
+
+    c) What are the data values in the brightest objects in the frame? What are reasonable display settings to use to see what is going on with these? For example, if you want to see how extended the objects are (note there may be different regimes!). How "big" are the stars?
+	The bright diffuse objects (galaxies) have values of around 500 on the edges and increase to several thousand in the center. There are also three very saturated objects, the three bright stars. The center of the top star has a data value of almost 38000, so it's not completely saturated, but it's still pretty bad. The bottom two stars both have center values of 65535, so the potential wells (capacitors) in the CCD corresponding to those pixels probably got filled to capacity with electrons (true saturation) - assuming that this image was taken using a CCD. By changing the scaling (see next paragraph), I figured out that the saturated parts of these three stars are concentrated to small circles at the center of each object, with a radius of about 1/5 the radius of the full bright spot, which shows that the stars are much smaller than the circle of light we see from them. 
+	This is where the min max setting for the scale comes in handy. Min mix histogram is good for seeing the full extent of objects (using cool for the color). Min max log with cool color is good for distinguishing extended objects from point sources and distinguishing stars from other bright objects (it brings out the diffraction spikes very clearly); these settings also show where the cores of the galaxies are vs the extended emission and make it easy to see how light is distributed or concentrated throughout each object. Min max log with the rainbow color table takes that a step further by showing which pixels are saturated. 
+
+
+
+
+4. Look at the g and i band images of the same object (SN17135_g.0101.fits and SN17135_i.0105.fits). Compare and contrast with the r band image.
+	In the i band, the light from the three stars is the most spread-out, but on the other hand, the light from the galaxies is the least spread-out. You can really see some nice structure in the gas around the galaxies in this band, lots of knots and more spiral-arm-looking features. The data values are all highest in the i band, and the vignetting effect I mentioned earlier is most obvious here (least obvious in g band). 
+	The r band is in-between the other two in terms of how each object's light is spread out. The galaxies' light is more spread-out than in i but less spread-out than in g, while the bright stars' light is less spread-out than in i but more spread-out than in g (well, actually, the stars might be about the same or a little less spread-out than g... it's hard to tell). The fact that the r band seems to be a sort of "intermediate" image between i and g makes perfect sense because the r filter is located exactly between g and i. 
+	In the g band, the galaxies are most spread-out and the bright stars are the least spread-out. The spiral arms in the galaxies stand out the most against the disk gas in this band, though details in the rest of the disk aren't as easy to see as they are in the i band (they're about the same as in r band). The diffraction spikes of the stars stand out best in either this band or the i band, but not so much in the r band. The data values are all lowest in the g band. Looking at the g-band image also made me realize that there are some not-quite-horizontal lines running across this image, maybe corresponding to spaces between cells in the CCD that recorded the image; the lines are in the other images too, but they're the most pronounced in the g band, so I only just noticed them. (They seem to be the least noticeable in the i band.) 
+	The nice thing about blinking between all three images is that you can see all the real objects in all three, but the cosmic rays are image-specific, so it helps guide the eye to the real features (the ones that stay when you move to the next image). 
+
+
+
+
+5. Look through several of the other images in the same directory, making sure to include some of the SA... images, bias images, flat images, and focus images. Practice determining good display settings to use for all of the images. Notice as much detail as you can about the images, and ask if you don't know what something is.
+	The biases... look like biases. The neat thing about them is that you can see different patterns in the noise depending on how zoomed-in you are, almost like a fractal. When you zoom in by some certain factors (there are a few that do this), you can see ripples similar to sand dunes in the noise. You can also see the dead pixels pretty clearly. Zscale is best for these, with an intensity setting of linear, power, or sinh and the b color table. Interestingly, while all the bias images show the "ripples," each one has a different characteristic "scale" of the ripples: they're thicker in some than others, more or less spread out, running in slightly different directions, etc. These explain why I saw the "not-quite-horizontal" lines in the data images earlier. 
+	The flats look pretty uniform on a min max scale, but once you change to zscale you can see that the edges are clearly brighter. It's most obvious with the i8 and aips0 color tables and the sinh and histogram intensities. (This explains why the edges of the data images generally had higher counts than the middle.) In some bands, the darkest part of the flat is actually offset from the center toward the bottom (i,r) or top (z) of the image. 
+	I've never head of a focus image before, but I imagine that it's an image of the calibration object (star) used to focus the telescope before taking the desired data. (I've taken images like this before but never saved them or came up with a term for them.) I think they look best with my usual preferred settings - zscale, sinh, cool color. The first one looks like a typical focus image of a bright star in a relatively clear field; in the next one, it looks like the telescope stopped tracking and started again a few times to create little "tracks" of stars moving down the image, possibly to indicate which direction on the image is West; the final image has the same "tracks" but also a "stepped"-looking color/brightness gradient from the top (darkest) to the bottom (lightest) of the image (maybe because each time the telescope started tracking again it stayed tracking for longer than the previous time or because the telescope switched between all the filters while the image was being taken? I'm not sure). 
+	The four GD images are all of the same field and all in r band (I'm not really sure what they are since they're only in r band). The first two are almost identical and aligned with each other, and the second two are slightly offset from the first two (meaning that the field of view is just slightly shifted so the objects appear to move when you blink between the frames) and are also aligned with each other and almost identical. The first two look less noisy than the last two. The field contains a handful of galaxies and/or stars. There's one object with counts of up to 30000. (I think the best settings for these are zscale sinh cool for details and min-max log rainbow to see where there are unusually high counts.) 
+	Everything I said about the GD images applies to the HZ4 images: the four HZ4 images are exactly the same as GD, just looking at a different part of the sky. In this case there are two objects with centers that have counts of more than 10000 not too far away from each other. 
+	The "junk.fits" file is an image of the same field we worked with for the previous questions (the same field as SN17135). It's WAY more saturated than the SN17135 images, though. There are values in the 3 bright stars of more than 100,000 up to 262,140! So I'm guessing it's called "junk" because it's too saturated to use for science. 
+	The four SA images contain two bright objects (probably stars) that are saturated and a handful of background galaxies (I think). Using min-max log with the b color table, you can see clear diffraction spikes around the brightest object. (With min-max log cool, the images look like the classic blue Disney background with the castle and the star looks like the "wish upon a star" star they always use.) Just like with GD and HZ4, there are four r-band images of the same field with the second pair slightly offset from the first; they look best with the same settings as GD and HZ4 as well. 
+	The rest of the images in the directory are similar to the SN17135 images, just centered on different fields. Like the SN17135 images, there are multiple images in each of multiple bands (g, i, r, and sometimes z). They look best with the same display settings as the SN17135 images. 
+	
+	
+	
+
+6. Do some of this again using another tool (gaia/ds9), which has similar capability.
+	I used Gaia for this. I think the coolest thing about it is the feature that lets you draw a vector between two objects and tells you the length of that vector in arcseconds or as well as the length of the horizontal and vertical components of the vector - that's really useful for determining the proper distance between two objects on the sky (if they're at the same redshift). In my opinion, the best combination of settings in Gaia is logarithmic scale, light colormap, and ramp intensity. The Image-Analysis menu seems really useful, so I'll explore that more. 
+
+
+
+
+7. Try looking at some images taken with other instruments, e.g.:
+
+    a) APO3.5m + DIS: /home/apo/jan13/130113/130113.0025r.fits : what are you seeing here?
+	This is a spectrum. There are a lot of sky lines and cosmic rays, but also some very bright real lines from an extended object (probably a galaxy). (It looks really nice with the b color table and linear zscale.) You can see that the extended object is clumpy because its spectral lines vary in brightness in the vertical direction (ie, along the length of the galaxy).   
+
+    b) APO3.5m + echelle: /home/apo/jun13/130623/130623.0021.fits : what are you seeing here?
+	This is a spectrum from an echelle spectrograph, meaning it displays a spectrum in "pieces" sort of like the way text is split into lines on a typed page. Multiple orders of the spectrum are displayed at once, so the "text" so to speak repeats itself. There's a ton of information in this one image. 
+
+    c) SDSS +APOGEE: /home/apogee/r6/red/55866/ap2D-b-03040015.fits : what are you seeing here? Note that this file is an example of a multi-extension FITS file, i.e., there are several images included in the file: a flux image, an uncertainty array, and a mask array. Try to look at the second extension and understand the values in it.
+	This is definitely the strangest data I've ever looked at. The mask array and flux image (which looks like an echelle spectrum) make sense to me, but the uncertainty array is very bizarre-looking. 
+
