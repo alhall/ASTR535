@@ -22,11 +22,9 @@ PRO exposure_time_calculator
   print, S_over_t, ' photons per second' 
 
   ; for these numbers (given in q10), the program gets: 
-  ;   5.5133605 photons per second
-  ; If I use only 3 wavelengths in the array (5000, 5500, 6000 A), it gets: 
-  ;   7.5674382 photons per second
-  ; so it gets more accurate with a smaller dlambda, as expected. 
-
+  ; 4.9629263131563395  photons per second
+  ;   (for both wavelengths in the array)
+  ; Success! 
   
 END 
 
