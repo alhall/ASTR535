@@ -1,0 +1,112 @@
+Exercises: 1/29
+
+
+
+
+1. Predict the RA crossing the meridian at midnight for the first of every month. Try the command skycalendar (on the cluster, unless you download it yourself for your laptop) - give yourself a wide terminal window first - to see how well you did.
+	On March 21, midnight is 12h. Sidereal time changes from solar by ~4 minutes every day, so 20 days earlier, RA at midnight was 4x20=80 minutes earlier, or 10h 40m. RA changes by about 2 hours every month (24 hours over one year / 12 months per year = 2 hours per month). So, the RA of the meridian at midnight is:
+
+March 1: 10h 40m 
+April 1: 12h 40m  
+May 1:  14h 40m 
+June 1:  16h 40m 
+July 1:  18h 40m 
+August 1:  20h 40m 
+September 1:  22h 40m 
+October 1:  0h 40m 
+November 1:  2h 40m 
+December 1:  4h 40m 
+January 1:  6h 40m 
+February 1: 8h 40m 
+
+Skycalendar says:
+January: 6 43 08 
+February: 8 45 21
+March: 10 35 45
+April: 11 37 48    * This is an hour off from mine because Skycalendar is using Daylight Savings Time. 
+May: 13 36 05    * This is an hour off from mine because Skycalendar is using Daylight Savings Time. 
+June: 15 38 18    * This is an hour off from mine because Skycalendar is using Daylight Savings Time. 
+July: 17 36 35    * This is an hour off from mine because Skycalendar is using Daylight Savings Time. 
+August: 19 38 48    * This is an hour off from mine because Skycalendar is using Daylight Savings Time. 
+September: 21 41 01    * This is an hour off from mine because Skycalendar is using Daylight Savings Time. 
+October: 23 39 18    * This is an hour off from mine because Skycalendar is using Daylight Savings Time. 
+November: 2 41 41
+December: 4 39 57 
+
+
+
+
+2. What time is it now? What is the sidereal time? What coordinates would it be most optimal to observe right now?
+	It is currently 10:00am (normal, non-Daylight-Savings, MST = UT-7). The date is January 29, which is about 7 weeks before the vernal equinox. On the vernal equinox, at 10:00am (two hours before noon) the RA of the meridian will be 2 hours before 0h, which is 22h. Every week, there's about a 30-minute difference between sidereal and solar time, so 7 weeks is 7 x 30 = 210 minutes, which is 3 hours and 30 minutes. That means that the current sidereal time here is ~22h - 3.5h = roughly 18h 30m. About 3 hours in each direction is most optimal, so the best range of RAs to observe right now is 15h 30m to 21h 30m. 
+(Skycalc said the RA overhead here at 10am was 18 28 - not bad!) 
+
+
+
+
+3. When are the dark (no moon above horizon) first half nights in first quarter? 
+	The 1st quarter is January 1 to March 31. From January 1 until March 12, the first half is from ~6pm to midnight; at 2am on March 13, Daylight Savings begins, so from March 13 through March 31, the first half starts at ~7pm and ends at 1am. In both cases, the first half will be dark when the Moon is in the third quarter, waning crescent, or new phase. 
+The nights that meet these requirements are: 
+January 2 through January 10
+February 1 through February 8
+March 1 through March 9 
+March 31
+(all in 2016 of course)
+
+
+
+
+4. APO schedules the 3.5m in half-night blocks (A and B), split at midnight (or 1am during daylight savings). What are the best half-nights in the next year (month and half, e.g., Oct A, March B, etc.) to request to observe:
+    a) Virgo cluster of galaxies (note central galaxy is M87, look up the coordinates)
+	RA is 12 30 49.4, so best half-nights are February B, March B, April B, April A, May A, and maybe January B and June A (though those are cutting it close). 
+
+    b) Galactic center (galactic coordinates are .... ask if you don't know!). You can use command skycoor (or Python or IDL tools) to convert galactic to equatorial (skycoor with no arguments gives syntax).
+	RA is about 17 45 40, so best half-nights are May B, June B, July A, and August A.
+
+    c) Jupiter (look up its position using JPL HORIZONS)
+	February B, March B, March A, April B, April A, May A, maybe June A 
+
+
+
+
+5. Run skycalc (choose observatory A for APO, ? gives list of command help, look at r, d, y, and h commands). For the galactic center, what is the maximum amount of time it can be observed at an airmass of less than 2.5? How about the Virgo cluster? Why are these different?
+	The Galactic center can be observed at an airmass of less than 2.5 for about 3.5 hours; the Virgo galaxy cluster can be observed at an airmass of less than 2.5 for almost 9.5 hours. These are different because the two objects have different declinations: the Galactic center is in the southern hemisphere, so it's never going to rise very high above the horizon as seen from APO. M87, on the other hand, has a declination of a little more than +12 degrees, so it gets close to APO's zenith. 
+
+
+
+
+6.Run jskycalc. Play with all of the buttons! What planets will be visible spring 2016, and at what times of night? Note that you can load files with a list of coordinates, and you can make airmass observability charts for them.
+	(answer)
+
+
+
+
+7. Start to outline plan for an 3 half-night observing run during late March A halves, when we are taking our APO trip. Eventually, the plan should include a list of objects for each night with a tentative order of observation, taking into account how much time needs to be spent on each object. Our projects are still TBD, but will likely include observations with multiple instruments.
+
+    a) Determine the approximate range of RAs that we will be able to observe.
+	(answer)
+
+    b) Given the NMSU 1st quarter proposals, which of them might we be able to make some observations for?
+	(answer)
+
+    c) If you have other ideas for projects, start to tabulate them. (Sten/Diane stars for APOGEE calibration/neutron capture calibration, Triplespec RR Lyrae RV curves Drew Be stars)
+	(answer)
+
+    d) Start to prepare a joint web page with the plan, including relevant information: coordinates of objects, finder images if necessary, links to tabulated spectra, instrument manuals, etc. etc.
+	(answer)
+
+
+
+
+8. Look up the catalog Globular Clusters in the Milky Way in VizieR and download it (make sure to get all of the rows).
+
+    a) Plot the locations in an Aitoff projection of equatorial coordinates. Can you detect Galactic structure?
+	(answer)
+
+    b) What clusters would be possible to observe during our March run?
+	(answer)
+
+    c) Convert coordinates to galactic coordinates and plot in an Aitoff projection.
+	(answer)
+
+
+
